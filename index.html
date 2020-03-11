@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>Matthew Erickson</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
@@ -18,28 +18,28 @@
 		<script src="./app.js"></script>
 	</head>
 	<body class="is-preload">
-
 	<!-- Wrapper -->
 	<div id="wrapper">
 
 		<!-- Header -->
 		<header id="header">
+
 			<div class="content">
 				<div class="inner">
 					<h1>Matthew Erickson</h1>
 					<ul class="icons">
 						<li>
-							<a href="https://www.linkedin.com/in/me5/" class="icon brands fa-linkedin">
+							<a href="https://www.linkedin.com/in/me5/" target="_blank" class="icon brands fa-linkedin">
 								<span class="label">Linked In</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://github.com/MatthewErickson" class="icon brands fa-github">
+							<a href="https://github.com/MatthewErickson" target="_blank" class="icon brands fa-github">
 								<span class="label">Github</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://leetcode.com/msylcatam/" class="icon fa-file-code">
+							<a href="https://leetcode.com/msylcatam/" target="_blank" class="icon fa-file-code">
 								<span class="label">LeetCode</span>
 							</a>
 						</li>
@@ -48,9 +48,9 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a href="#intro">Intro</a></li>
-					<li><a href="#work">Work</a></li>
 					<li><a href="#about">About</a></li>
+					<li><a href="#work">Work</a></li>
+					<li><a href="./documents/Resume.pdf" target="_blank">Resume</a></li>
 					<li><a href="#secret">Secret</a></li>
 				</ul>
 			</nav>
@@ -59,34 +59,54 @@
 		<!-- Main -->
 		<div id="main">
 
-			<!-- Intro -->
-			<article id="intro">
-				<h2 class="major">Intro</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt=""/></span>
-				<p>Two sentence intro about myself</p>
+			<!-- About Me -->
+			<article id="about" style="text-align: justify">
+				<h2 class="major">About Me</h2>
+				<span class="image right main"><img src="images/profile.jpg" alt=""/></span>
+				<p>
+					I have lived in the Seattle area for all of my life. And I absolutely love it here.
+				</p>
+				<p>
+					I started my studies at Western Washington University with an emphasis on mathematics.
+					I realized that math wasn't for me at the beginning of my sophomore year so I looked around for something else that was more exciting for me.
+				</p>
+				<p>
+					On a whim, I took an entry level computer science class and feel in love with coding.
+					Since then, I have had a passion for solving problems using technology.
+				</p>
 			</article>
 
 			<!-- Work -->
-			<article id="work">
+			<article id="work" style="text-align: justify">
 				<h2 class="major">Work</h2>
-				<span class="image main"><img src="images/pic02.jpg" alt=""/></span>
-				<p>A couple lines about me working at Expedia. Link to <a href="./documents/Resume.pdf">Resume</a></p>
+				<span class="image right main"><img src="images/expedia-group-logo.jpg" alt=""/></span>
+				<p>
+					My first job as a software developer was at Expedia Inc (now Expedia Group) starting in 2016.
+				</p>
+				<p>
+					I worked on the Expedia Search and Suggest team, which is responsible for providing typeahead suggestions.
+					Providing a reliable and performant typeahead API was required in order to handle almost a billion requests weekly.
+				</p>
+				<p>
+					A lot of the work was focused on improving the relevancy of our suggestions by taking a number of factors into consideration.
+					During my time there, I contributed large projects such as:
+					<ul>
+						<li>Recent History</li>
+						<li>Migrate data from in-memory to Elasticsearch</li>
+						<li>Analytics rework</li>
+					</ul>
+				</p>
 			</article>
 
-			<!-- About -->
-			<article id="about">
-				<h2 class="major">About</h2>
-				<span class="image main"><img src="images/pic03.jpg" alt=""/></span>
-				<p>Not sure how this is different. Rename this section and figure it out.</p>
-			</article>
-
-			<!-- Elements -->
-			<article id="secret">
-				<h2 class="major">Secret</h2>
+			<!-- Treasure Hunt -->
+			<article id="secret" style="text-align: justify">
+				<h2 class="major">Treasure Hunt</h2>
 
 				<section>
-					<p>There's some encrypted data embedded on this page that you can attempt to decrypt below.
-						Answer these questions to the best of your ability.</p>
+					<p>
+						There's some encrypted data embedded on this page that you can attempt to decrypt by answering the questions below and clicking submit.
+						Successful decryption will give you the next clue.
+					</p>
 					<div class="field">
 						<label for="data1">What is my favorite number?</label>
 						<input type="text" name="data1" id="data1">
@@ -117,7 +137,7 @@
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">&copy; Matthew Erickson Enterprises
+			<p class="copyright">
 				<!-- Design: <a href="https://html5up.net">HTML5 UP</a>. --></p>
 		</footer>
 

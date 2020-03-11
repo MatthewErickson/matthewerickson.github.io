@@ -20,11 +20,14 @@ function submit1() {
         if (decrypted && decrypted != "rb") {
             $("#data-output")[0].innerHTML = decrypted;
         } else {
-            $("#data-output")[0].innerHTML = "One or more wrong answers";
-            $("#data-output")[0].style = "color: red";
+            error();
         }
-    } catch (error) {
-        $("#data-output")[0].innerHTML = "One or more wrong answers";
-        $("#data-output")[0].style = "color: red";
+    } catch (anything) {
+        error();
     }
+}
+
+function error() {
+    $("#data-output")[0].innerHTML = "One or more wrong answers. Decryption failed.";
+    $("#data-output")[0].style = "color: red";
 }
