@@ -6,93 +6,68 @@
 -->
 <html>
 <head>
-    <title>Code</title>
+    <title>Matthew Erickson</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="dimension/assets/css/main.css"/>
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css"/>
+        <link rel="stylesheet" href="dimension/assets/css/noscript.css"/>
     </noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"
             integrity="sha256-6rXZCnFzbyZ685/fMsqoxxZz/QZwMnmwHg+SsNe+C/w=" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </head>
 <body class="is-preload">
-
 <!-- Wrapper -->
 <div id="wrapper">
 
     <!-- Header -->
-    <header id="header">
-        <div class="content">
-            <div class="inner">
-                <h1>Code</h1>
-            </div>
+    <header id="header" style="text-align: left; width: 100%">
+        <div class="table-wrapper" style="width: 100%">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Difficulty</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="#findMaxValue">Find Max Value</a></td>
+                    <td>Normal</td>
+                    <td>Easy</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#secret">Secret</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Main -->
     <div id="main">
 
-        <!-- Intro -->
-        <article id="about">
-            <h2 class="major">About Me</h2>
-            <span class="image main"><img src="images/pic01.jpg" alt=""/></span>
+        <!-- About Me -->
+        <article id="findMaxValue" style="text-align: justify">
+            <h2 class="major">Find Max Value</h2>
+            <h3>Problem</h3>
             <p>
-                I have lived in the Seattle area for all of my life. And I absolutely love it here.
+                <b>Given</b>: array of integers
+                <br>
+                <b>Return</b>: the maximum value in the array
             </p>
+            <h3>Solution</h3>
             <p>
-                I started my studies at Western Washington University with an emphasis on mathematics.
-                I realized that math wasn't for me at the beginning of my sophomore year so I looked around for something else that was more exciting for me.
-                On a whim, I took an entry level computer science class and feel in love with coding.
+                Just loop through and keep track of the biggest number you've seen.
             </p>
-        </article>
+            <h3>Code</h3>
 
-        <!-- Work -->
-        <article id="work">
-            <h2 class="major">Work</h2>
-            <span class="image main"><img src="images/expedia-group-logo.jpg" alt=""/></span>
-            <p>A couple lines about me working at Expedia. Link to <a href="./documents/Resume.pdf">Resume</a></p>
-        </article>
-
-        <!-- Elements -->
-        <article id="secret">
-            <h2 class="major">Secret</h2>
-
-            <section>
-                <p>There's some encrypted data embedded on this page that you can attempt to decrypt below.
-                    Answer these questions to the best of your ability.</p>
-                <div class="field">
-                    <label for="data1">What is my favorite number?</label>
-                    <input type="text" name="data1" id="data1">
-                </div>
-                <br>
-                <div class="field">
-                    <label for="data2">Which dorm did I stay in during my freshman year?</label>
-                    <input type="text" name="data2" id="data2">
-                </div>
-                <br>
-                <div class="field">
-                    <label for="data3">What was my fastest 200 meter dash time?</label>
-                    <input type="text" name="data3" id="data3">
-                </div>
-                <br>
-                <div class="field">
-                    <p class="button" onclick="submit1();">Submit</p>
-                </div>
-                <br>
-                <div class="field">
-                    <p id="data-output"></p>
-                </div>
-            </section>
-
+            <pre><code>public int findMaxValue(int[] array) {
+    int max = Integer.MIN_VALUE;
+    for (int num : array) {
+        max = Math.max(max, num);
+    }
+    return max;
+}</code></pre>
         </article>
 
     </div>
@@ -105,15 +80,12 @@
 
 </div>
 
-<!-- BG -->
-<div id="bg"></div>
-
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="dimension/assets/js/jquery.min.js"></script>
+<script src="dimension/assets/js/browser.min.js"></script>
+<script src="dimension/assets/js/breakpoints.min.js"></script>
+<script src="dimension/assets/js/util.js"></script>
+<script src="dimension/assets/js/main.js"></script>
 
 </body>
 </html>
