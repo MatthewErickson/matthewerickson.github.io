@@ -38,6 +38,11 @@
                     <td>Normal</td>
                     <td>Easy</td>
                 </tr>
+                <tr>
+                    <td><a href="#unionFind">Union-Find</a></td>
+                    <td>Graphs</td>
+                    <td>Hard</td>
+                </tr>
                 </tbody>
             </table>
         </div>
@@ -46,7 +51,28 @@
     <!-- Main -->
     <div id="main">
 
-        <!-- About Me -->
+        <!-- Standard format
+
+        <article id="fixMe" style="text-align: justify">
+            <h2 class="major">fixMe</h2>
+            <h3>Problem</h3>
+            <p>
+                <b>Given</b>:
+                <br>
+                <b>Return</b>:
+            </p>
+            <h3>Solution</h3>
+            <p>
+
+            </p>
+            <h3>Code</h3>
+            <pre><code>public int doSomething(int[] array) {
+    return 1;
+}</code></pre>
+        </article>
+
+        -->
+
         <article id="findMaxValue" style="text-align: justify">
             <h2 class="major">Find Max Value</h2>
             <h3>Problem</h3>
@@ -60,7 +86,6 @@
                 Just loop through and keep track of the biggest number you've seen.
             </p>
             <h3>Code</h3>
-
             <pre><code>public int findMaxValue(int[] array) {
     int max = Integer.MIN_VALUE;
     for (int num : array) {
@@ -68,6 +93,53 @@
     }
     return max;
 }</code></pre>
+        </article>
+
+        <article id="unionFind" style="text-align: justify">
+            <h2 class="major">Union-Find</h2>
+            <h3>Problem</h3>
+            <p>
+                <b>Given</b>: N/A
+                <br>
+                <b>Return</b>: N/A
+            </p>
+            <h3>Solution</h3>
+            <p>
+                Union-Find is a neat algorithm for joining forests in graphs optimally. For a more in-depth explanation, see
+                <a target="_blank" href="https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf">this document</a>.
+            </p>
+            <h3>Code</h3>
+            <pre><code>public class UnionFind {
+        private int[] id;
+        private int n;
+
+        public UnionFind(int n) {
+            this.n = n;
+            id = new int[n];
+            for (int i = 0; i < n; i++) {
+                id[i] = i;
+            }
+        }
+
+        public void union(int p, int q) {
+            id[root(p)] = root(q);
+        }
+
+        public boolean find(int p, int q) {
+            if (0 <= p && p < n && 0 <= q && q < n) {
+                return root(p) == root(q);
+            }
+            return false;
+        }
+
+        private int root(int i) {
+            while (i != id[i]) {
+                id[i] = id[id[i]];
+                i = id[i];
+            }
+            return i;
+        }
+    }</code></pre>
         </article>
 
     </div>
