@@ -39,6 +39,11 @@
                     <td>Easy</td>
                 </tr>
                 <tr>
+                    <td><a href="#shortestPath">Shortest Path</a></td>
+                    <td>Graphs</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
                     <td><a href="#unionFind">Union-Find</a></td>
                     <td>Graphs</td>
                     <td>Hard</td>
@@ -117,6 +122,75 @@
             }
             return i;
         }
+    }</code></pre>
+        </article>
+
+        <article id="shortestPath" style="text-align: justify">
+            <h2 class="major">Find Shortest Path</h2>
+            <h3>Problem</h3>
+            <p>
+                <b>Given</b>: NxN grid of integers where grid[i][j] == 0 means that position is empty and grid[i][j] == 1 means that position is blocked.
+                You can move from one position on the grid to another if they are diagonally or cardinal adjacent.
+                <br>
+                <b>Return</b>: The shortest path length from grid[0][0] to grid[N-1][N-1].
+            </p>
+            <h3>Solution</h3>
+            <p>
+                Simple Breadth-First Search starting from (0,0), expanding in all eight directions as long as adjacent positions are empty.
+            </p>
+            <h3>Code</h3>
+            <pre><code>
+    public int shortestPathBinaryMatrix(int[][] grid) {
+
+        int[][] directions = new int[][]{
+            {-1, 1}, {0, 1}, {1, 1},
+            {-1, 0},         {1, 0},
+            {-1,-1}, {0,-1}, {1,-1}
+        };
+        if (grid[0][0] == 1) {
+            return -1;
+        }
+        Queue&lt;List&lt;Integer&gt;&gt; queue = new LinkedList<>();
+        Set&lt;Integer&gt; seen = new HashSet<>();
+
+        queue.add(Arrays.asList(0));
+        seen.add(0);
+        int pathLength = 1;
+
+        while (!queue.isEmpty()) {
+            List&lt;Integer&gt; curr = queue.poll();
+            List&lt;Integer&gt; next = new ArrayList<>();
+            for (int key : curr) {
+                int row = key / grid.length;
+                int col = key % grid.length;
+                if (row == grid.length - 1 && col == grid.length - 1) {
+                    if (grid[row][col] == 0) {
+                        return pathLength;
+                    } else {
+                        return -1;
+                    }
+                }
+                for (int[] dir : directions) {
+                    int newRow = row + dir[0];
+                    int newCol = col + dir[1];
+                    if (0 <= newRow && newRow < grid.length && 0 <= newCol && newCol < grid.length) {
+                        if (grid[newRow][newCol] == 0) {
+                            int newKey = newRow * grid.length + newCol;
+                            if (!seen.contains(newKey)) {
+                                seen.add(newKey);
+                                next.add(newKey);
+                            }
+                        }
+                    }
+                }
+            }
+            if (next.size() > 0) {
+                queue.add(next);
+            }
+            pathLength++;
+        }
+
+        return -1;
     }</code></pre>
         </article>
 
