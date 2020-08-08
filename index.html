@@ -51,7 +51,6 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#work">Work</a></li>
 					<li><a href="./documents/Resume.pdf" target="_blank">Resume</a></li>
-					<li><a href="#code">Code</a></li>
 					<li><a href="#secret">Secret</a></li>
 				</ul>
 			</nav>
@@ -79,28 +78,39 @@
 
 			<!-- Work -->
 			<article id="work" style="text-align: justify">
-				<h2 class="major">Work</h2>
-				<img class="image right" src="dimension/images/expedia-group-logo.jpg" alt=""/>
-				<p>
-					My first job as a software developer was at Expedia Inc (now Expedia Group) starting in 2016.
-				</p>
-				<p>
-					I worked on the Expedia Search and Suggest team, which is responsible for providing typeahead suggestions.
-					Providing a reliable and performant typeahead API was required in order to handle almost a billion requests weekly.
-				</p>
-				<p>
-					A lot of the work was focused on improving the relevancy of our suggestions by taking a number of factors into consideration.
-					During my time there, I contributed large projects such as:
+				<h1 class="major">Work</h1>
+				<div>
+					<h2>Expedia Group</h2>
+					<img class="image right" src="dimension/images/expedia-group-logo.jpg" alt=""/>
+					<p>
+						My first job as a software developer was at Expedia Inc (now Expedia Group) starting in 2016.
+					</p>
+					<p>
+						I worked on the Expedia Search and Suggest team, which is responsible for providing typeahead suggestions.
+						Providing a reliable and performant typeahead API was required in order to handle almost a billion requests weekly.
+					</p>
+					<p>
+						A lot of the work was focused on improving the relevancy of our suggestions by taking a number of factors into consideration.
+						During my time there, I contributed large projects such as:
 					<ul>
 						<li>Recent History</li>
 						<li>Migrate data from in-memory to Elasticsearch</li>
 						<li>Analytics rework</li>
 					</ul>
-				</p>
-			</article>
+					</p>
+				</div>
+				<div>
+					<h2>Microsoft</h2>
+					<img class="image right" src="dimension/images/microsoft.png" alt=""/>
+					<p>
+						I joined Microsoft on April 20, 2020.
+					</p>
+					<p>
+						I currently work on the Sovereign Engineering team and work on enabling Azure developers to access data easier
+						through a new project I'm working on called CNQ.
+					</p>
+				</div>
 
-			<article id="code">
-				<iframe style="height:40em; width:100%;" src="./code.html"></iframe>
 			</article>
 
 			<!-- Treasure Hunt -->
@@ -109,26 +119,21 @@
 
 				<section>
 					<p>
-						There's some encrypted data embedded on this page that you can attempt to decrypt by answering the questions below and clicking submit.
+						There's some encrypted data embedded on this page that you can attempt to decrypt by entering your answer below.
 						Successful decryption will give you the next clue.
 					</p>
+					<p>
+						The first clue is a randomly chosen three digit number. This will start you on your journey.
+					</p>
+					<p>
+						The first person to complete the hunt will get $500.
+					</p>
 					<div class="field">
-						<label for="data1">What is my favorite number?</label>
-						<input type="text" name="data1" id="data1">
+						<input type="text" id="data1">
 					</div>
 					<br>
 					<div class="field">
-						<label for="data2">Which dorm did I stay in during my freshman year?</label>
-						<input type="text" name="data2" id="data2">
-					</div>
-					<br>
-					<div class="field">
-						<label for="data3">What was my fastest 200 meter dash time?</label>
-						<input type="text" name="data3" id="data3">
-					</div>
-					<br>
-					<div class="field">
-						<p class="button" onclick="submit1();">Submit</p>
+						<span class="button" onclick="submitAnswer();">Submit</span>
 					</div>
 					<br>
 					<div class="field">
