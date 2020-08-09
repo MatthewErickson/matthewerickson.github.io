@@ -34,8 +34,8 @@ function submitRedmondAnswer() {
 }
 
 var encrypted_data_public = [
-    "U2FsdGVkX18U/llSeXdIE4P0kn4XxalvFJWptbCnt/AbgDZUwFU6ISId9nd9aSSm",
-    "U2FsdGVkX18FDIJLhRZFGq4njDagWN8euS8VNAtxm2eUm+5mznP7jYND3bFLpq4WGAnQmggsJYakRoSBZcSYJSejJiaBLuiEYa6pgrHKpcEkQ8JpPX6XanNwnXNAYwMw+TzsYQ5pfHmPitO3IKGFJw=="
+    "U2FsdGVkX1+JkRc82VhPth0E5MCjJz+Mu8uEMZse0B6U6Pi9jSZQJPqXSA14hQY+duB1AvAIQk6bPlb1zY7hG6kZ43zUSZKXGee1uldmzAI=",
+    "U2FsdGVkX18tOU7Y5oJ/H/5sZfcdsY/+Bt+EFHfsI66PaBiXCFjudrFuYfxhnrJ4HqjaOmBDZK1I/SMkTOoj2oHDV8ztvWF6HLqetD1fmA6+FgH0Cj7lwIc3uFQoA6ObxJy9geU19/NFg1fMvte9gA=="
 ];
 
 function submitPublicAnswer() {
