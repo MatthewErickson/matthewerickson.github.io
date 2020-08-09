@@ -51,7 +51,8 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#work">Work</a></li>
 					<li><a href="./documents/Resume.pdf" target="_blank">Resume</a></li>
-					<li><a href="#secret">Secret</a></li>
+					<li><a href="#redmondHunt">Redmond Hunt</a></li>
+					<li><a href="#publicHunt">Public Hunt</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -114,13 +115,15 @@
 				</div>
 			</article>
 
-			<!-- Treasure Hunt -->
-			<article id="secret" style="text-align: justify">
+			<!-- Redmond Treasure Hunt -->
+			<article id="redmondHunt" style="text-align: justify">
 				<h2 class="major">Redmond Treasure Hunt</h2>
 				<section>
 					<p>
 						There's some encrypted data embedded on this page that you can attempt to decrypt by
-						entering your answer below. Successful decryption will give you the next clue.
+						entering your answer below. Successful decryption will give you the next clue. The clues
+						are largely Redmond based with the initial intention of this hunt to be in real life. But,
+						for now, most can be completed from the comfort of home. Enjoy!
 					</p>
 					<p>
 						The first answer is a three digit number. This will start you on your journey.
@@ -129,15 +132,39 @@
 						The first person to complete the hunt will get $500.
 					</p>
 					<div class="field">
-						<input type="text" id="data1" autocomplete="off">
+						<input type="text" id="data-redmond" autocomplete="off">
 					</div>
 					<br>
 					<div class="field">
-						<span class="button" onclick="submitAnswer();">Submit</span>
+						<span class="button" onclick="submitRedmondAnswer();">Submit</span>
 					</div>
 					<br>
 					<div class="field">
-						<p id="data-output"></p>
+						<p id="data-output-redmond"></p>
+					</div>
+				</section>
+			</article>
+
+			<!-- Public Treasure Hunt -->
+			<article id="publicHunt" style="text-align: justify">
+				<h2 class="major">Public Treasure Hunt</h2>
+				<section>
+					<p>
+						The first answer is a one digit number. This will start you on your journey.
+					</p>
+					<p>
+						There is currently no prize for this hunt.
+					</p>
+					<div class="field">
+						<input type="text" id="data-public" autocomplete="off">
+					</div>
+					<br>
+					<div class="field">
+						<span class="button" onclick="submitPublicAnswer();">Submit</span>
+					</div>
+					<br>
+					<div class="field">
+						<p id="data-output-public"></p>
 					</div>
 				</section>
 			</article>
